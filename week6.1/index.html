@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 300px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: gray;
+            color: white;
+        }
+
+        /* 交錯顏色 */
+        tr:nth-child(odd) td {
+            background-color: yellow;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #ddd;
+        }
+
+        /* 右上角固定 */
+        .fixed-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border: 3px solid green;
+            padding: 20px;
+            width: 150px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <div class="fixed-box">
+        This div element has<br>
+        position: fixed;
+    </div>
+
+</body>
+</html>
