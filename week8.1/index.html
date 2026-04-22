@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Demo</title>
+
+  <style>
+    body {
+      font-family: Roboto, Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* 按鈕樣式 */
+    .btn {
+      height: 22px;                 /* h22 */
+      padding: 0 18px;              /* 左右間距 */
+      border: 1px solid #2f2f2f;    /* 外框 */
+      border-radius: 8px;           /* R8 */
+      background-color: #ffffff;    /* 白底 */
+      color: #2f2f2f;               /* 字色 */
+      font-size: 13px;              /* 字體大小 */
+      font-family: Roboto, Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    /* hover效果（滑過去） */
+    .btn:hover {
+      background-color: #f2f2f2;
+    }
+
+    /* 點擊效果 */
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <button class="btn">查看資訊</button>
+
+</body>
+</html>
