@@ -2,27 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<!-- ⭐ 超重要 -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Responsive Layout</title>
 
 <style>
 body {
     margin: 0;
-    font-family: Arial;
     background: #4da3d9;
 }
 
 /* 外框 */
 .container {
     width: 90%;
-    max-width: 800px;
-    margin: 30px auto;
-    background: #eee;
+    margin: 20px auto;
+    background: white;
     padding: 10px;
     border-radius: 10px;
 }
 
-/* 綠色區塊 */
+/* 綠色 */
 .header {
     background: #a4c639;
     height: 120px;
@@ -33,7 +34,6 @@ body {
 .middle {
     display: flex;
     gap: 10px;
-    margin-bottom: 10px;
 }
 
 .middle div {
@@ -42,10 +42,11 @@ body {
     flex: 1;
 }
 
-/* 灰色區塊 */
+/* 灰色 */
 .footer {
     display: flex;
     gap: 10px;
+    margin-top: 10px;
 }
 
 .footer div {
@@ -54,13 +55,15 @@ body {
     flex: 1;
 }
 
-/* 📱 手機版（小於480px） */
+/* 📱 小於480px → 自動改版 */
 @media (max-width: 480px) {
 
+    /* 藍色變直排 */
     .middle {
         flex-direction: column;
     }
 
+    /* 灰色變兩排 */
     .footer {
         flex-wrap: wrap;
     }
@@ -76,7 +79,6 @@ body {
 <body>
 
 <div class="container">
-
     <div class="header"></div>
 
     <div class="middle">
@@ -91,7 +93,104 @@ body {
         <div></div>
         <div></div>
     </div>
+</div>
 
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- ⭐ 超重要 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Responsive Layout</title>
+
+<style>
+body {
+    margin: 0;
+    background: #4da3d9;
+}
+
+/* 外框 */
+.container {
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* 綠色 */
+.header {
+    background: #a4c639;
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+/* 藍色區塊 */
+.middle {
+    display: flex;
+    gap: 10px;
+}
+
+.middle div {
+    background: #1fb5c1;
+    height: 100px;
+    flex: 1;
+}
+
+/* 灰色 */
+.footer {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer div {
+    background: #ccc;
+    height: 60px;
+    flex: 1;
+}
+
+/* 📱 小於480px → 自動改版 */
+@media (max-width: 480px) {
+
+    /* 藍色變直排 */
+    .middle {
+        flex-direction: column;
+    }
+
+    /* 灰色變兩排 */
+    .footer {
+        flex-wrap: wrap;
+    }
+
+    .footer div {
+        width: 48%;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header"></div>
+
+    <div class="middle">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="footer">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 </div>
 
 </body>
