@@ -1,51 +1,122 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <title>Button Demo</title>
+<meta charset="UTF-8">
+<title>UI Layout Demo</title>
 
-  <style>
-    body {
-      font-family: Roboto, Arial, sans-serif;
-      background-color: #f5f5f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+<style>
+body {
+  font-family: Roboto, Arial;
+  background: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
 
-    /* 按鈕樣式 */
-    .btn {
-      height: 22px;                 /* h22 */
-      padding: 0 18px;              /* 左右間距 */
-      border: 1px solid #2f2f2f;    /* 外框 */
-      border-radius: 8px;           /* R8 */
-      background-color: #ffffff;    /* 白底 */
-      color: #2f2f2f;               /* 字色 */
-      font-size: 13px;              /* 字體大小 */
-      font-family: Roboto, Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
+/* 整體容器 */
+.container {
+  width: 900px;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+}
 
-    /* hover效果（滑過去） */
-    .btn:hover {
-      background-color: #f2f2f2;
-    }
+/* 上方區域 */
+.top {
+  display: flex;
+  gap: 20px;
+}
 
-    /* 點擊效果 */
-    .btn:active {
-      transform: translateY(1px);
-    }
+/* 左邊清單 */
+.list {
+  width: 250px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
 
-  </style>
+.item {
+  height: 20px;
+  background: #7ed957;
+  margin-bottom: 6px;
+}
+
+/* 右邊圖片區 */
+.preview {
+  flex: 1;
+}
+
+.preview img {
+  width: 100%;
+  max-width: 450px;
+}
+
+/* 按鈕（重點） */
+.btn {
+  height: 22px;
+  padding: 0 18px;
+  border: 1px solid #2f2f2f;
+  border-radius: 8px;
+  background: #fff;
+  color: #2f2f2f;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* 下方資訊 */
+.bottom {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  height: 150px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.info {
+  background: #7ed957;
+  height: 18px;
+  margin-bottom: 5px;
+}
+</style>
 </head>
 
 <body>
 
-  <button class="btn">查看資訊</button>
+<div class="container">
+
+  <!-- 上方 -->
+  <div class="top">
+
+    <!-- 左邊清單 -->
+    <div class="list">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+
+    <!-- 右邊 -->
+    <div class="preview">
+      <button class="btn">查看資訊</button>
+      <img src="https://picsum.photos/450/240" alt="">
+    </div>
+
+  </div>
+
+  <!-- 下方資訊 -->
+  <div class="bottom">
+    <div class="info"></div>
+    <div class="info"></div>
+    <div class="info"></div>
+    <div class="info"></div>
+    <div class="info"></div>
+    <div class="info"></div>
+  </div>
+
+</div>
 
 </body>
 </html>
