@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse Event Practice</title>
+</head>
+
+<body>
+  <h1 id="text">Hello</h1>
+
+  <button 
+    onmouseover="mouseOver()" 
+    onclick="mouseClick()">
+    Button
+  </button>
+
+  <script>
+    function mouseOver() {
+      document.getElementById("text").innerHTML = "Hello";
+      document.getElementById("text").style.color = "magenta";
+    }
+
+    function mouseClick() {
+      document.getElementById("text").innerHTML = "Mouse Click";
+      document.getElementById("text").style.color = "magenta";
+    }
+  </script>
+</body>
+</html>
